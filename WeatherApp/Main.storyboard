@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HfR-c1-5QZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="GgG-b4-kcP">
+            <objects>
+                <navigationController id="HfR-c1-5QZ" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cYZ-RY-DyP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.84173512070000001" blue="0.46741217750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YSK-h6-Q0c" kind="relationship" relationship="rootViewController" id="QN0-av-Cve"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CnP-nC-9KQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-174" y="-204"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Fnx-kM-rKq">
+            <objects>
+                <viewController id="YSK-h6-Q0c" customClass="MapViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ESm-8S-4Ok">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-Tc-6QE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NY2-Tc-6QE" firstAttribute="leading" secondItem="mkP-Ux-8m2" secondAttribute="leading" id="Ke9-fq-nPo"/>
+                            <constraint firstItem="mkP-Ux-8m2" firstAttribute="bottom" secondItem="NY2-Tc-6QE" secondAttribute="bottom" id="Mzs-gY-Yz6"/>
+                            <constraint firstItem="mkP-Ux-8m2" firstAttribute="trailing" secondItem="NY2-Tc-6QE" secondAttribute="trailing" id="by9-Tg-nos"/>
+                            <constraint firstItem="NY2-Tc-6QE" firstAttribute="top" secondItem="mkP-Ux-8m2" secondAttribute="top" id="wpC-QP-5Tg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mkP-Ux-8m2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Myt-By-aoO"/>
+                    <connections>
+                        <outlet property="mapView" destination="NY2-Tc-6QE" id="PT8-fy-vZU"/>
+                        <segue destination="8DR-0h-2HJ" kind="show" identifier="DetailsSegue" id="IhL-Qj-bcd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qpn-xp-Xc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="-205"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="m4W-ZL-TeD">
+            <objects>
+                <viewController id="8DR-0h-2HJ" customClass="DetailsViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2fL-Qv-gkO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6za-Wr-ou2">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6za-Wr-ou2" firstAttribute="leading" secondItem="tkY-dV-I4H" secondAttribute="leading" id="YtK-eo-ncV"/>
+                            <constraint firstItem="tkY-dV-I4H" firstAttribute="trailing" secondItem="6za-Wr-ou2" secondAttribute="trailing" id="rBh-WL-69y"/>
+                            <constraint firstItem="6za-Wr-ou2" firstAttribute="top" secondItem="tkY-dV-I4H" secondAttribute="top" id="vJz-WA-DVI"/>
+                            <constraint firstItem="tkY-dV-I4H" firstAttribute="bottom" secondItem="6za-Wr-ou2" secondAttribute="bottom" id="ztj-Wn-5Ie"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tkY-dV-I4H"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="6za-Wr-ou2" id="Y7f-Eo-2vd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="csn-ef-fNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1660" y="-206.44677661169416"/>
+        </scene>
+    </scenes>
+</document>
