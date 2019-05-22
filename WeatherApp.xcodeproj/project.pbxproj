@@ -11,7 +11,6 @@
 		55A50FFEB55A536F4E3D23D8 /* Pods_WeatherAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F78DFA2C6C490E380813EE1 /* Pods_WeatherAppTests.framework */; };
 		849042B276EA36E3929D90FA /* Pods_WeatherAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DC50D1C40A2C7388610EA49 /* Pods_WeatherAppUITests.framework */; };
 		FE2D87AC22959156006D1519 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87AB22959156006D1519 /* AppDelegate.swift */; };
-		FE2D87AE22959156006D1519 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87AD22959156006D1519 /* ViewController.swift */; };
 		FE2D87B322959157006D1519 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2D87B222959157006D1519 /* Assets.xcassets */; };
 		FE2D87B622959157006D1519 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2D87B422959157006D1519 /* LaunchScreen.storyboard */; };
 		FE2D87C122959157006D1519 /* WeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87C022959157006D1519 /* WeatherAppTests.swift */; };
@@ -21,12 +20,9 @@
 		FE2D87F2229591C3006D1519 /* CitiesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F1229591C3006D1519 /* CitiesData.swift */; };
 		FE2D87FB229591D0006D1519 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F3229591CF006D1519 /* DetailsViewController.swift */; };
 		FE2D87FC229591D0006D1519 /* CityDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F4229591CF006D1519 /* CityDetails.swift */; };
-		FE2D87FD229591D0006D1519 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F5229591CF006D1519 /* Daily.swift */; };
 		FE2D87FE229591D0006D1519 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F6229591CF006D1519 /* APIHandler.swift */; };
-		FE2D87FF229591D0006D1519 /* Hourly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F7229591D0006D1519 /* Hourly.swift */; };
-		FE2D8800229591D0006D1519 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F8229591D0006D1519 /* DetailCell.swift */; };
+		FE2D8800229591D0006D1519 /* HourlyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */; };
 		FE2D8801229591D0006D1519 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F9229591D0006D1519 /* City.swift */; };
-		FE2D8802229591D0006D1519 /* Currently.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87FA229591D0006D1519 /* Currently.swift */; };
 		FE2D8804229591D5006D1519 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8803229591D5006D1519 /* utils.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +55,6 @@
 		F83B32A41A004D0666F5C4F2 /* Pods-WeatherAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeatherAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WeatherAppTests/Pods-WeatherAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FE2D87A822959156006D1519 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2D87AB22959156006D1519 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE2D87AD22959156006D1519 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE2D87B222959157006D1519 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE2D87B522959157006D1519 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE2D87B722959157006D1519 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,12 +69,9 @@
 		FE2D87F1229591C3006D1519 /* CitiesData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesData.swift; sourceTree = "<group>"; };
 		FE2D87F3229591CF006D1519 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		FE2D87F4229591CF006D1519 /* CityDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetails.swift; sourceTree = "<group>"; };
-		FE2D87F5229591CF006D1519 /* Daily.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 		FE2D87F6229591CF006D1519 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		FE2D87F7229591D0006D1519 /* Hourly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hourly.swift; sourceTree = "<group>"; };
-		FE2D87F8229591D0006D1519 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyDetailCell.swift; sourceTree = "<group>"; };
 		FE2D87F9229591D0006D1519 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
-		FE2D87FA229591D0006D1519 /* Currently.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Currently.swift; sourceTree = "<group>"; };
 		FE2D8803229591D5006D1519 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +123,6 @@
 				A6BA6277FBCEB4A32298038B /* Pods-WeatherAppUITests.debug.xcconfig */,
 				3F53C11117F2EE5D0E3B7EC7 /* Pods-WeatherAppUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -162,7 +153,6 @@
 			children = (
 				FE2D87AB22959156006D1519 /* AppDelegate.swift */,
 				FE2D87D9229591A7006D1519 /* MapViewController.swift */,
-				FE2D87AD22959156006D1519 /* ViewController.swift */,
 				FE2D87F1229591C3006D1519 /* CitiesData.swift */,
 				FE2D87EF229591B9006D1519 /* Main.storyboard */,
 				FE2D8803229591D5006D1519 /* utils.swift */,
@@ -170,11 +160,8 @@
 				FE2D87F6229591CF006D1519 /* APIHandler.swift */,
 				FE2D87F9229591D0006D1519 /* City.swift */,
 				FE2D87F4229591CF006D1519 /* CityDetails.swift */,
-				FE2D87FA229591D0006D1519 /* Currently.swift */,
-				FE2D87F5229591CF006D1519 /* Daily.swift */,
-				FE2D87F8229591D0006D1519 /* DetailCell.swift */,
+				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
 				FE2D87F3229591CF006D1519 /* DetailsViewController.swift */,
-				FE2D87F7229591D0006D1519 /* Hourly.swift */,
 				FE2D87B422959157006D1519 /* LaunchScreen.storyboard */,
 				FE2D87B722959157006D1519 /* Info.plist */,
 			);
@@ -427,10 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE2D8800229591D0006D1519 /* DetailCell.swift in Sources */,
-				FE2D87FF229591D0006D1519 /* Hourly.swift in Sources */,
-				FE2D8802229591D0006D1519 /* Currently.swift in Sources */,
-				FE2D87AE22959156006D1519 /* ViewController.swift in Sources */,
+				FE2D8800229591D0006D1519 /* HourlyDetailCell.swift in Sources */,
 				FE2D87FC229591D0006D1519 /* CityDetails.swift in Sources */,
 				FE2D87DA229591A7006D1519 /* MapViewController.swift in Sources */,
 				FE2D8804229591D5006D1519 /* utils.swift in Sources */,
@@ -439,7 +423,6 @@
 				FE2D8801229591D0006D1519 /* City.swift in Sources */,
 				FE2D87AC22959156006D1519 /* AppDelegate.swift in Sources */,
 				FE2D87FB229591D0006D1519 /* DetailsViewController.swift in Sources */,
-				FE2D87FD229591D0006D1519 /* Daily.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

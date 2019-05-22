@@ -12,8 +12,10 @@ import CoreLocation
 
 struct APIHandler {
     static func requestWeather(coordinates: CLLocationCoordinate2D?, success: @escaping (Data)->(), failure: @escaping (Error)->()) {
-        if let coordinate = coordinates {
-            Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(coordinate.latitude),\(coordinate.longitude)?\(units)").responseData { (response) in
+//        if let coordinate = coordinates {
+            Alamofire.request("https://api.darksky.net/forecast/74923a7df9b9aa2133db783a5d21c33f/37.8267,-122.4233?units=si")
+//            Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(coordinate.latitude),\(coordinate.longitude)?\(units)")
+                .responseData { (response) in
                 switch response.result {
                 case .success(let value):
                     success(value)
@@ -21,7 +23,7 @@ struct APIHandler {
                     failure(error)
                 }
             }
-        }
+        //}
        
     }
 }
