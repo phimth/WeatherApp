@@ -22,7 +22,6 @@ class HourlyDetailCell: UITableViewCell {
     }
     
         func configure(withCity city: CityDetails.ForecastData?) {
-            print(city?.humidity)
             if let _time = city?.time{
                 let formatter = DateFormatter()
                 let date = Date(timeIntervalSince1970: _time)

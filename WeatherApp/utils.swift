@@ -9,7 +9,7 @@
 import Foundation
 
 var apiKey: String = "74923a7df9b9aa2133db783a5d21c33f"
-var units: String = "SI"
+var units: String = "si"
 
 extension Double {
     func toRoundString() -> String {

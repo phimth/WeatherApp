@@ -31,6 +31,7 @@
 		FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */; };
 		FE2D881022968809006D1519 /* ExtraBisInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */; };
 		FE2D88122296BDF3006D1519 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = FE2D88112296BDF3006D1519 /* Icons */; };
+		FE91562A2296F95900267CFD /* CitiesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9156292296F95900267CFD /* CitiesListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfosCell.swift; sourceTree = "<group>"; };
 		FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraBisInfosCell.swift; sourceTree = "<group>"; };
 		FE2D88112296BDF3006D1519 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
+		FE9156292296F95900267CFD /* CitiesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 				FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */,
 				FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */,
 				FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */,
+				FE9156292296F95900267CFD /* CitiesListCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				FE2D881022968809006D1519 /* ExtraBisInfosCell.swift in Sources */,
 				FE2D87F2229591C3006D1519 /* CitiesData.swift in Sources */,
 				FE2D8801229591D0006D1519 /* City.swift in Sources */,
+				FE91562A2296F95900267CFD /* CitiesListCell.swift in Sources */,
 				FE2D87AC22959156006D1519 /* AppDelegate.swift in Sources */,
 				FE2D880C22968491006D1519 /* ForecastCell.swift in Sources */,
 				FE2D87FB229591D0006D1519 /* DetailsViewController.swift in Sources */,
