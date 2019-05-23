@@ -22,10 +22,11 @@ class HeaderCell: UITableViewCell{
     }
     func configure(withCity city: CityDetails.ForecastData?) {
             if let _icon = city?.icon{
-                iconView.sd_setImage(with: URL(string: _icon), completed: nil)
+                iconView.image = UIImage(named: "Icons/\(_icon)")
+//                iconView.sd_setImage(with: URL(string: _icon), completed: nil)
             }
             if let _temperature = city?.temperature{
-                temperatureLabel.text = "\(_temperature)"
+                temperatureLabel.text = _temperature.toRoundString()
             }
             if let _summary = city?.summary{
                 summaryLabel.text = "\(_summary)"

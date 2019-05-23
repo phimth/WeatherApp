@@ -20,18 +20,21 @@ class DailyDetailCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(withCity city: CityDetails.ForecastList?) {
+    func configure(withCity city: CityDetails.ForecastData?) {
         if let _time = city?.time{
-            dayLabel.text = "\(_time)"
-        }
+            let formatter = DateFormatter()
+            let date = Date(timeIntervalSince1970: _time)
+            formatter.dateFormat = "EEE dd"
+            let formattedDate = formatter.string(from: date)
+            dayLabel.text = "\(formattedDate)"        }
         if let _icon = city?.icon{
-            iconView.sd_setImage(with: URL(string: _icon), completed: nil)
+            iconView.image = UIImage(named: "Icons/\(_icon)")
         }
         if let _temperatureMin = city?.temperatureMin{
-            tempMaxLabel.text = "\(_temperatureMin)"
+            tempMinLabel.text = _temperatureMin.toRoundString()
         }
         if let _temperatureMax = city?.temperatureMax{
-            tempMaxLabel.text = "\(_temperatureMax)"
+            tempMaxLabel.text = _temperatureMax.toRoundString()
         }
     }
 }

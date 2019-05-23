@@ -13,7 +13,7 @@ import CoreLocation
 struct APIHandler {
     static func requestWeather(coordinates: CLLocationCoordinate2D?, success: @escaping (Data)->(), failure: @escaping (Error)->()) {
    if let coordinate = coordinates {
-          Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(coordinate.latitude),\(coordinate.longitude)?\(units)")
+    Alamofire.request("https://api.darksky.net/forecast/\(apiKey)/\(coordinate.latitude),\(coordinate.longitude)?\(units)", method: .get)
                 .responseData { (response) in
                 switch response.result {
                 case .success(let value):

@@ -21,18 +21,23 @@ class HourlyDetailCell: UITableViewCell {
         // Initialization code
     }
     
-        func configure(withCity city: CityDetails.ForecastList?) {
+        func configure(withCity city: CityDetails.ForecastData?) {
+            print(city?.humidity)
             if let _time = city?.time{
-                hourLabel.text = "\(_time)"
+                let formatter = DateFormatter()
+                let date = Date(timeIntervalSince1970: _time)
+                formatter.dateFormat = "HH"
+                let formattedDate = formatter.string(from: date)
+                hourLabel.text = "\(formattedDate)"
             }
             if let _icon = city?.icon{
-                iconView.sd_setImage(with: URL(string: _icon), completed: nil)
+                iconView.image = UIImage(named: "Icons/\(_icon)")
             }
             if let _humidity = city?.humidity{
-                humidityLabel.text = "\(_humidity)"
+                humidityLabel.text = (_humidity*100).toRoundString()
             }
             if let _temperature = city?.temperature{
-                temperatureLabel.text = "\(_temperature)"
+                temperatureLabel.text = _temperature.toRoundString()
             }
 
 

@@ -30,6 +30,7 @@
 		FE2D880C22968491006D1519 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880B22968491006D1519 /* ForecastCell.swift */; };
 		FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */; };
 		FE2D881022968809006D1519 /* ExtraBisInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */; };
+		FE2D88122296BDF3006D1519 /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = FE2D88112296BDF3006D1519 /* Icons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		FE2D880B22968491006D1519 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfosCell.swift; sourceTree = "<group>"; };
 		FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraBisInfosCell.swift; sourceTree = "<group>"; };
+		FE2D88112296BDF3006D1519 /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 		FE2D87AA22959156006D1519 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				FE2D88112296BDF3006D1519 /* Icons */,
 				FE2D87AB22959156006D1519 /* AppDelegate.swift */,
 				FE2D87D9229591A7006D1519 /* MapViewController.swift */,
 				FE2D87F1229591C3006D1519 /* CitiesData.swift */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2D87F0229591B9006D1519 /* Main.storyboard in Resources */,
+				FE2D88122296BDF3006D1519 /* Icons in Resources */,
 				FE2D87B622959157006D1519 /* LaunchScreen.storyboard in Resources */,
 				FE2D87B322959157006D1519 /* Assets.xcassets in Resources */,
 			);

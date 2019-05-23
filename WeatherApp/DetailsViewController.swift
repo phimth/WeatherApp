@@ -33,6 +33,10 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         APIHandler.requestWeather(coordinates: dataReceived?.coordinate, success: { (data) in
             let decoder = JSONDecoder()
             self.city = (try? decoder.decode(CityDetails.self, from: data))
+            if let _data =  self.city?.hourly?.data  {
+                self.city?.hourly?.data = Array(_data.prefix(24))
+
+            }
             self.tableView.reloadData()
         }) { (error) in
             print(error)
@@ -48,15 +52,13 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 0:
             return 1
         case 1:
-            return 1 + (city?.daily?.data?.count ?? 0)
+            return  1
         case 2:
-            return 1 + (city?.daily?.data?.count ?? 0)
+            return (city?.hourly?.data?.count ?? 0)
         case 3:
-            return 1 + (city?.daily?.data?.count ?? 0)
+            return (city?.daily?.data?.count ?? 0)
         case 4:
-            return 1 + (city?.daily?.data?.count ?? 0)
-        case 5:
-            return 1 + (city?.daily?.data?.count ?? 0)
+            return  1
         default:
             return 0
         }
@@ -78,13 +80,13 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell", for :  indexPath) as? HourlyDetailCell{
-                cell.configure(withCity: city?.hourly)
+                cell.configure(withCity: city?.hourly?.data?[indexPath.row])
                 return cell
             }
             
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for :  indexPath) as? DailyDetailCell{
-                cell.configure(withCity: city?.daily)
+                cell.configure(withCity: city?.daily?.data?[indexPath.row])
                 return cell
             }
             

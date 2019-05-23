@@ -21,13 +21,17 @@ class ForecastCell: UITableViewCell {
     
     func configure(withCity city: CityDetails.ForecastData?) {
         if let _time = city?.time{
-            hourLabel.text = "\(_time)"
+            let formatter = DateFormatter()
+            let date = Date(timeIntervalSince1970: _time)
+            formatter.dateFormat = "EEE dd"
+            let formattedDate = formatter.string(from: date)
+            hourLabel.text = "\(formattedDate)"
         }
         if let _humidity = city?.humidity{
-            humidityLabel.text = "\(_humidity)"
+            humidityLabel.text = (_humidity*100).toRoundString()
         }
         if let _temperature = city?.temperature{
-            temperatureLabel.text = "\(_temperature)"
+            temperatureLabel.text = _temperature.toRoundString()
         }
     }
 }

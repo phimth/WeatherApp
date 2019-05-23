@@ -20,10 +20,10 @@ class ExtraInfosCell: UITableViewCell {
 
     func configure(withCity city: CityDetails.ForecastData?) {
         if let _humidity = city?.humidity{
-            humidityLabel.text = "\(_humidity)"
+            humidityLabel.text = (_humidity*100).toRoundString()
         }
         if let _windSpeed = city?.windSpeed{
-            winSpeedLabel.text = "\(_windSpeed)"
+            winSpeedLabel.text = _windSpeed.toRoundString()
         }
     }
     
