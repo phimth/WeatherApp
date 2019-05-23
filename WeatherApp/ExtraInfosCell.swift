@@ -10,15 +10,21 @@ import UIKit
 
 class ExtraInfosCell: UITableViewCell {
 
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var winSpeedLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configure(withCity city: CityDetails.ForecastData?) {
+        if let _humidity = city?.humidity{
+            humidityLabel.text = "\(_humidity)"
+        }
+        if let _windSpeed = city?.windSpeed{
+            winSpeedLabel.text = "\(_windSpeed)"
+        }
     }
-
+    
 }

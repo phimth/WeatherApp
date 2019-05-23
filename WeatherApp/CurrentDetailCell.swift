@@ -9,6 +9,7 @@
 import UIKit
 
 class CurrentDetailCell: UITableViewCell {
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

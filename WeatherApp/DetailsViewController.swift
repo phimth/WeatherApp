@@ -23,6 +23,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.title = dataReceived?.title ?? ""
         self.tableView.delegate  =  self
         self.tableView.dataSource = self
+
         request()
         //print(self.city)
         
@@ -62,13 +63,50 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        if let cell = tableView.dequeueReusableCell(withIdentifier: "mainID", for: indexPath) as? HourlyDetailCell {
-//            cell.configure(withCity: (city?.hourly?.data?[indexPath.row]))
-//            return cell
-//        }
-        return UITableViewCell()
-        //cell.configure(city?.hourly?.data[indexPath.row])
+        switch indexPath.section {
+        case 0:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell {
+                cell.configure(withCity: city?.currently)
+                return cell
+            }
+        
+        case 1:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for :  indexPath) as? ForecastCell{
+                cell.configure(withCity: city?.hourly?.data?[indexPath.row])
+                return cell
+            }
+        
+        case 2:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell", for :  indexPath) as? HourlyDetailCell{
+                cell.configure(withCity: city?.hourly)
+                return cell
+            }
+            
+        case 3:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for :  indexPath) as? DailyDetailCell{
+                cell.configure(withCity: city?.daily)
+                return cell
+            }
+            
+        case 4:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCell", for :  indexPath) as? ExtraInfosCell{
+                cell.configure(withCity: city?.currently)
+                return cell
+            }
+            
+        case 5:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraBisCell", for :  indexPath) as? ExtraBisInfosCell{
+                cell.configure(withCity: city?.currently)
+                return cell
+            }
+            
+        default:
+                    return UITableViewCell()
+        }
+
+                return UITableViewCell()
     }
+    
     
 
 }

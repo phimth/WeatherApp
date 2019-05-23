@@ -17,13 +17,19 @@ struct CityDetails: Decodable {
         var summary: String?
         var humidity: Double?
         var pressure: Double?
-        var winSpeed: Double?
+        var windSpeed: Double?
         var uvIndex: Int?
+        var time: Int?
     }
     
     struct ForecastList:Decodable {
         var icon: String?
         var summary: String?
+        var time: Int?
+        var humidity: Double?
+        var temperature: Double?
+        var temperatureMin: Double?
+        var temperatureMax: Double?
         var data: [ForecastData]?
     }
     

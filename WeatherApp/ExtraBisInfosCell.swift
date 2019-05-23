@@ -10,15 +10,22 @@ import UIKit
 
 class ExtraBisInfosCell: UITableViewCell {
 
+    @IBOutlet weak var pressureLabel: UILabel!
+    @IBOutlet weak var uvIndexLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func configure(withCity city: CityDetails.ForecastData?) {
+        if let _pressure = city?.pressure{
+            pressureLabel.text = "\(_pressure)"
+        }
+        if let _uvIndex = city?.uvIndex{
+            uvIndexLabel.text = "\(_uvIndex)"
+        }
     }
 
 }

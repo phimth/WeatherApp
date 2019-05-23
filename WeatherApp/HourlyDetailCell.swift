@@ -11,18 +11,31 @@ import UIKit
 class HourlyDetailCell: UITableViewCell {
 
     
-//    func configure(withCity city: CityDetails.ForecastData?) {
-//        if let _summary = city?.summary{
-//            summaryLabel.text = "\(_summary)"
-//        }
-//        if let _humidity = city?.humidity{
-//            humidityLabel.text = "\(_humidity)"
-//        }
-//        if let _temperature = city?.temperature{
-//            temperatureLabel.text = "\(_temperature)"
-//        }
-//
-//
-//    }
+    @IBOutlet weak var hourLabel: UILabel!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var humidityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+    
+        func configure(withCity city: CityDetails.ForecastList?) {
+            if let _time = city?.time{
+                hourLabel.text = "\(_time)"
+            }
+            if let _icon = city?.icon{
+                iconView.sd_setImage(with: URL(string: _icon), completed: nil)
+            }
+            if let _humidity = city?.humidity{
+                humidityLabel.text = "\(_humidity)"
+            }
+            if let _temperature = city?.temperature{
+                temperatureLabel.text = "\(_temperature)"
+            }
+
+
+        }
     
 }
