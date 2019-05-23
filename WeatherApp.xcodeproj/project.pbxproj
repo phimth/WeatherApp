@@ -24,6 +24,12 @@
 		FE2D8800229591D0006D1519 /* HourlyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */; };
 		FE2D8801229591D0006D1519 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F9229591D0006D1519 /* City.swift */; };
 		FE2D8804229591D5006D1519 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8803229591D5006D1519 /* utils.swift */; };
+		FE2D880622967D75006D1519 /* DailyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880522967D75006D1519 /* DailyDetailCell.swift */; };
+		FE2D880822967FAB006D1519 /* CurrentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */; };
+		FE2D880A22968415006D1519 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880922968415006D1519 /* HeaderCell.swift */; };
+		FE2D880C22968491006D1519 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880B22968491006D1519 /* ForecastCell.swift */; };
+		FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */; };
+		FE2D881022968809006D1519 /* ExtraBisInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +79,12 @@
 		FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourlyDetailCell.swift; sourceTree = "<group>"; };
 		FE2D87F9229591D0006D1519 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FE2D8803229591D5006D1519 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		FE2D880522967D75006D1519 /* DailyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailCell.swift; sourceTree = "<group>"; };
+		FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDetailCell.swift; sourceTree = "<group>"; };
+		FE2D880922968415006D1519 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		FE2D880B22968491006D1519 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
+		FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfosCell.swift; sourceTree = "<group>"; };
+		FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraBisInfosCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,10 +172,16 @@
 				FE2D87F6229591CF006D1519 /* APIHandler.swift */,
 				FE2D87F9229591D0006D1519 /* City.swift */,
 				FE2D87F4229591CF006D1519 /* CityDetails.swift */,
-				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
 				FE2D87F3229591CF006D1519 /* DetailsViewController.swift */,
 				FE2D87B422959157006D1519 /* LaunchScreen.storyboard */,
 				FE2D87B722959157006D1519 /* Info.plist */,
+				FE2D880922968415006D1519 /* HeaderCell.swift */,
+				FE2D880B22968491006D1519 /* ForecastCell.swift */,
+				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
+				FE2D880522967D75006D1519 /* DailyDetailCell.swift */,
+				FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */,
+				FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */,
+				FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";
@@ -415,13 +433,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE2D8800229591D0006D1519 /* HourlyDetailCell.swift in Sources */,
+				FE2D880622967D75006D1519 /* DailyDetailCell.swift in Sources */,
+				FE2D880822967FAB006D1519 /* CurrentDetailCell.swift in Sources */,
 				FE2D87FC229591D0006D1519 /* CityDetails.swift in Sources */,
+				FE2D880A22968415006D1519 /* HeaderCell.swift in Sources */,
+				FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */,
 				FE2D87DA229591A7006D1519 /* MapViewController.swift in Sources */,
 				FE2D8804229591D5006D1519 /* utils.swift in Sources */,
 				FE2D87FE229591D0006D1519 /* APIHandler.swift in Sources */,
+				FE2D881022968809006D1519 /* ExtraBisInfosCell.swift in Sources */,
 				FE2D87F2229591C3006D1519 /* CitiesData.swift in Sources */,
 				FE2D8801229591D0006D1519 /* City.swift in Sources */,
 				FE2D87AC22959156006D1519 /* AppDelegate.swift in Sources */,
+				FE2D880C22968491006D1519 /* ForecastCell.swift in Sources */,
 				FE2D87FB229591D0006D1519 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,39 +33,41 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             let decoder = JSONDecoder()
             self.city = (try? decoder.decode(CityDetails.self, from: data))
             self.tableView.reloadData()
-            print(self.city)
         }) { (error) in
             print(error)
         }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
+        switch section {
+        case 0:
             return 1
-        }
-        if section == 1 {
-            return 1 + (city?.hourly?.data?.count ?? 0)
-        }
-        if section == 2 {
+        case 1:
             return 1 + (city?.daily?.data?.count ?? 0)
+        case 2:
+            return 1 + (city?.daily?.data?.count ?? 0)
+        case 3:
+            return 1 + (city?.daily?.data?.count ?? 0)
+        case 4:
+            return 1 + (city?.daily?.data?.count ?? 0)
+        case 5:
+            return 1 + (city?.daily?.data?.count ?? 0)
+        default:
+            return 0
         }
-        if section == 3 {
-            return 3
-        }
-        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print(self.city ?? "")
-        
-        //cell.configutre(city?.hourly?.data[indexPath.row])
-        
-        
+//        if let cell = tableView.dequeueReusableCell(withIdentifier: "mainID", for: indexPath) as? HourlyDetailCell {
+//            cell.configure(withCity: (city?.hourly?.data?[indexPath.row]))
+//            return cell
+//        }
         return UITableViewCell()
+        //cell.configure(city?.hourly?.data[indexPath.row])
     }
     
 

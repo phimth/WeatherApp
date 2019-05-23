@@ -1,16 +1,19 @@
 //
-//  DetailCell.swift
+//  CurrentDetailCell.swift
 //  WeatherApp
 //
-//  Created by Thomas PHIMANESONE on 22/05/2019.
-//  Copyright © 2019 st2diio. All rights reserved.
+//  Created by Thomas PHIMANESONE on 23/05/2019.
+//  Copyright © 2019 Thomas PHIMANESONE. All rights reserved.
 //
 
 import UIKit
 
-class HourlyDetailCell: UITableViewCell {
+class CurrentDetailCell: UITableViewCell {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
 
-    
 //    func configure(withCity city: CityDetails.ForecastData?) {
 //        if let _summary = city?.summary{
 //            summaryLabel.text = "\(_summary)"
@@ -21,8 +24,5 @@ class HourlyDetailCell: UITableViewCell {
 //        if let _temperature = city?.temperature{
 //            temperatureLabel.text = "\(_temperature)"
 //        }
-//
-//
 //    }
-    
 }
