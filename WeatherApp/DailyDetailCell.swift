@@ -32,10 +32,10 @@ class DailyDetailCell: UITableViewCell {
             iconView.image = UIImage(named: "Icons/\(_icon)")
         }
         if let _temperatureMin = city?.temperatureMin{
-            tempMinLabel.text = _temperatureMin.toRoundString()
+            tempMinLabel.text = "\(_temperatureMin.toRoundString())°"
         }
         if let _temperatureMax = city?.temperatureMax{
-            tempMaxLabel.text = _temperatureMax.toRoundString()
+            tempMaxLabel.text = "\(_temperatureMax.toRoundString())°"
         }
     }
 }

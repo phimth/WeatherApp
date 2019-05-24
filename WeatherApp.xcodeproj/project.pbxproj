@@ -25,7 +25,7 @@
 		FE2D8801229591D0006D1519 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D87F9229591D0006D1519 /* City.swift */; };
 		FE2D8804229591D5006D1519 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D8803229591D5006D1519 /* utils.swift */; };
 		FE2D880622967D75006D1519 /* DailyDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880522967D75006D1519 /* DailyDetailCell.swift */; };
-		FE2D880822967FAB006D1519 /* CurrentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */; };
+		FE2D880822967FAB006D1519 /* DailySummaryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880722967FAB006D1519 /* DailySummaryDetailCell.swift */; };
 		FE2D880A22968415006D1519 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880922968415006D1519 /* HeaderCell.swift */; };
 		FE2D880C22968491006D1519 /* ForecastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880B22968491006D1519 /* ForecastCell.swift */; };
 		FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */; };
@@ -82,7 +82,7 @@
 		FE2D87F9229591D0006D1519 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		FE2D8803229591D5006D1519 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
 		FE2D880522967D75006D1519 /* DailyDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDetailCell.swift; sourceTree = "<group>"; };
-		FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentDetailCell.swift; sourceTree = "<group>"; };
+		FE2D880722967FAB006D1519 /* DailySummaryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryDetailCell.swift; sourceTree = "<group>"; };
 		FE2D880922968415006D1519 /* HeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		FE2D880B22968491006D1519 /* ForecastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCell.swift; sourceTree = "<group>"; };
 		FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraInfosCell.swift; sourceTree = "<group>"; };
@@ -184,7 +184,7 @@
 				FE2D880B22968491006D1519 /* ForecastCell.swift */,
 				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
 				FE2D880522967D75006D1519 /* DailyDetailCell.swift */,
-				FE2D880722967FAB006D1519 /* CurrentDetailCell.swift */,
+				FE2D880722967FAB006D1519 /* DailySummaryDetailCell.swift */,
 				FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */,
 				FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */,
 				FE9156292296F95900267CFD /* CitiesListCell.swift */,
@@ -441,7 +441,7 @@
 			files = (
 				FE2D8800229591D0006D1519 /* HourlyDetailCell.swift in Sources */,
 				FE2D880622967D75006D1519 /* DailyDetailCell.swift in Sources */,
-				FE2D880822967FAB006D1519 /* CurrentDetailCell.swift in Sources */,
+				FE2D880822967FAB006D1519 /* DailySummaryDetailCell.swift in Sources */,
 				FE2D87FC229591D0006D1519 /* CityDetails.swift in Sources */,
 				FE2D880A22968415006D1519 /* HeaderCell.swift in Sources */,
 				FE2D880E229687D7006D1519 /* ExtraInfosCell.swift in Sources */,

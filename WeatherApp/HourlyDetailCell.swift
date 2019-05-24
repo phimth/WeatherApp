@@ -37,7 +37,7 @@ class HourlyDetailCell: UITableViewCell {
                 humidityLabel.text = (_humidity*100).toRoundString()
             }
             if let _temperature = city?.temperature{
-                temperatureLabel.text = _temperature.toRoundString()
+                temperatureLabel.text = "\(_temperature.toRoundString())°"
             }
         }
     

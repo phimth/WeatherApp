@@ -26,7 +26,7 @@ class HeaderCell: UITableViewCell{
 //                iconView.sd_setImage(with: URL(string: _icon), completed: nil)
             }
             if let _temperature = city?.temperature{
-                temperatureLabel.text = _temperature.toRoundString()
+                temperatureLabel.text = "\(_temperature.toRoundString())°"
             }
             if let _summary = city?.summary{
                 summaryLabel.text = "\(_summary)"

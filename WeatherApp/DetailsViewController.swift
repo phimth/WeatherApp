@@ -44,7 +44,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 6
+        return 7
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -56,10 +56,12 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 2:
             return (city?.hourly?.data?.count ?? 0)
         case 3:
-            return (city?.daily?.data?.count ?? 0)
-        case 4:
             return  1
+        case 4:
+            return (city?.daily?.data?.count ?? 0)
         case 5:
+            return  1
+        case 6:
             return 1
         default:
             return 0
@@ -86,20 +88,25 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
                 cell.configure(withCity: city?.hourly?.data?[indexPath.row], timezone: city?.timezone)
                 return cell
             }
-            
         case 3:
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "DailySummaryCell", for :  indexPath) as? DailySummaryDetailCell{
+                cell.configure(withCity: city?.daily)
+                return cell
+            }
+            
+        case 4:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for :  indexPath) as? DailyDetailCell{
                 cell.configure(withCity: city?.daily?.data?[indexPath.row], timezone: city?.timezone)
                 return cell
             }
             
-        case 4:
+        case 5:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCell", for :  indexPath) as? ExtraInfosCell{
                 cell.configure(withCity: city?.currently)
                 return cell
             }
             
-        case 5:
+        case 6:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraBisCell", for :  indexPath) as? ExtraBisInfosCell{
                 cell.configure(withCity: city?.currently)
                 return cell
