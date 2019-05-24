@@ -394,10 +394,23 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bhf-zv-FGQ" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="268" width="414" height="414"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bhf-zv-FGQ" secondAttribute="height" multiplier="1:1" id="NBR-8F-Qey"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="loader"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.84173512070000001" blue="0.46741217750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tkY-dV-I4H" firstAttribute="trailing" secondItem="bhf-zv-FGQ" secondAttribute="trailing" id="8VG-b2-aQS"/>
                             <constraint firstItem="6za-Wr-ou2" firstAttribute="leading" secondItem="tkY-dV-I4H" secondAttribute="leading" id="YtK-eo-ncV"/>
+                            <constraint firstItem="bhf-zv-FGQ" firstAttribute="centerY" secondItem="tkY-dV-I4H" secondAttribute="centerY" id="huE-ee-UR1"/>
+                            <constraint firstItem="bhf-zv-FGQ" firstAttribute="leading" secondItem="tkY-dV-I4H" secondAttribute="leading" id="jJf-tH-n7u"/>
                             <constraint firstItem="tkY-dV-I4H" firstAttribute="trailing" secondItem="6za-Wr-ou2" secondAttribute="trailing" id="rBh-WL-69y"/>
                             <constraint firstItem="6za-Wr-ou2" firstAttribute="top" secondItem="tkY-dV-I4H" secondAttribute="top" id="vJz-WA-DVI"/>
                             <constraint firstItem="tkY-dV-I4H" firstAttribute="bottom" secondItem="6za-Wr-ou2" secondAttribute="bottom" id="ztj-Wn-5Ie"/>
@@ -405,6 +418,7 @@
                         <viewLayoutGuide key="safeArea" id="tkY-dV-I4H"/>
                     </view>
                     <connections>
+                        <outlet property="loader" destination="bhf-zv-FGQ" id="bnD-z2-zLg"/>
                         <outlet property="tableView" destination="6za-Wr-ou2" id="Y7f-Eo-2vd"/>
                     </connections>
                 </viewController>

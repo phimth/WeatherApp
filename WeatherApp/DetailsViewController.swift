@@ -8,12 +8,13 @@
 
 import UIKit
 import MapKit
+import Lottie
 
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
     @IBOutlet weak var tableView: UITableView!
-    
+    @IBOutlet weak var loader: AnimationView!
     var dataReceived: MKPointAnnotation?
     var city: CityDetails? 
     
@@ -22,6 +23,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.title = dataReceived?.title ?? ""
         self.tableView.delegate  =  self
         self.tableView.dataSource = self
+        let loaderAnim = Animation.named("loader", subdirectory: "Icons")
+        loader.loopMode = .loop
+        loader.animation = loaderAnim
 //        self.tableView.backgroundColor = .blue
 
         request()
@@ -30,7 +34,11 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func request() {
-        APIHandler.requestWeather(coordinates: dataReceived?.coordinate, success: { (data) in
+        loader.isHidden = false
+        tableView.isHidden = true
+        loader.play()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0){
+            APIHandler.requestWeather(coordinates: self.dataReceived?.coordinate, success: { (data) in
             let decoder = JSONDecoder()
             self.city = (try? decoder.decode(CityDetails.self, from: data))
             if let _data =  self.city?.hourly?.data  {
@@ -38,8 +46,14 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
             }
             self.tableView.reloadData()
+            self.loader.isHidden = true
+            self.tableView.isHidden = false
+            self.loader.stop()
         }) { (error) in
+            self.loader.isHidden = true
+            self.loader.stop()
             print(error)
+        }
         }
     }
     
@@ -48,6 +62,9 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if city == nil {
+            return 0
+        }
         switch section {
         case 0:
             return 1

@@ -6,6 +6,7 @@ target 'WeatherApp' do
   use_frameworks!
 	pod 'Alamofire'
 	pod 'SDWebImage'
+    pod 'lottie-ios'
   # Pods for WeatherApp
 
   target 'WeatherAppTests' do
