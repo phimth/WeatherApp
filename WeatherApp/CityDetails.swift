@@ -39,6 +39,7 @@ struct CityDetails: Decodable {
     var hourly: ForecastList?
     var currently: ForecastData?
     var daily: ForecastList?
+    var timezone: String?
 }
 
 

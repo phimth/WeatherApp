@@ -20,11 +20,12 @@ class DailyDetailCell: UITableViewCell {
         // Initialization code
     }
     
-    func configure(withCity city: CityDetails.ForecastData?) {
+    func configure(withCity city: CityDetails.ForecastData?, timezone: String?) {
         if let _time = city?.time{
             let formatter = DateFormatter()
             let date = Date(timeIntervalSince1970: _time)
             formatter.dateFormat = "EEE dd"
+            formatter.timeZone = TimeZone(identifier: timezone ?? "")
             let formattedDate = formatter.string(from: date)
             dayLabel.text = "\(formattedDate)"        }
         if let _icon = city?.icon{

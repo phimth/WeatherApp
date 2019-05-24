@@ -71,6 +71,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell {
                 cell.configure(withCity: city?.currently)
+                
                 return cell
             }
         
@@ -82,13 +83,13 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell", for :  indexPath) as? HourlyDetailCell{
-                cell.configure(withCity: city?.hourly?.data?[indexPath.row])
+                cell.configure(withCity: city?.hourly?.data?[indexPath.row], timezone: city?.timezone)
                 return cell
             }
             
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for :  indexPath) as? DailyDetailCell{
-                cell.configure(withCity: city?.daily?.data?[indexPath.row])
+                cell.configure(withCity: city?.daily?.data?[indexPath.row], timezone: city?.timezone)
                 return cell
             }
             

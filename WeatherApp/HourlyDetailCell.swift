@@ -21,11 +21,12 @@ class HourlyDetailCell: UITableViewCell {
         // Initialization code
     }
     
-        func configure(withCity city: CityDetails.ForecastData?) {
-            if let _time = city?.time{
+    func configure(withCity city: CityDetails.ForecastData?, timezone: String?) {
+           if let _time = city?.time{
                 let formatter = DateFormatter()
                 let date = Date(timeIntervalSince1970: _time)
-                formatter.dateFormat = "HH"
+                formatter.dateFormat = "HH'h'"
+                formatter.timeZone = TimeZone(identifier: timezone ?? "")
                 let formattedDate = formatter.string(from: date)
                 hourLabel.text = "\(formattedDate)"
             }
