@@ -1,5 +1,5 @@
 # WeatherApp
 
 
-#Using Dark Sky API
+## Final project weather App using Dark Sky API
 
