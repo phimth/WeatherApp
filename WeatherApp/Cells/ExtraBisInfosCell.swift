@@ -13,12 +13,6 @@ class ExtraBisInfosCell: UITableViewCell {
     @IBOutlet weak var pressureLabel: UILabel!
     @IBOutlet weak var uvIndexLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(withCity city: CityDetails.ForecastData?) {
         if let _pressure = city?.pressure{
             pressureLabel.text = "\(_pressure)"

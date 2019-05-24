@@ -142,6 +142,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		921A002D22984EF1006654D5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D87F6229591CF006D1519 /* APIHandler.swift */,
+				FE2D8803229591D5006D1519 /* utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		921A002E22984EFB006654D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D87F1229591C3006D1519 /* CitiesData.swift */,
+				FE2D87F9229591D0006D1519 /* City.swift */,
+				FE2D87F4229591CF006D1519 /* CityDetails.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		921A003022984F08006654D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D87F3229591CF006D1519 /* DetailsViewController.swift */,
+				FE2D87D9229591A7006D1519 /* MapViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		921A003122984F17006654D5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FE2D880922968415006D1519 /* HeaderCell.swift */,
+				FE2D880B22968491006D1519 /* ForecastCell.swift */,
+				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
+				FE2D880522967D75006D1519 /* DailyDetailCell.swift */,
+				FE2D880722967FAB006D1519 /* DailySummaryDetailCell.swift */,
+				FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */,
+				FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */,
+				FE9156292296F95900267CFD /* CitiesListCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		FE2D879F22959156006D1519 = {
 			isa = PBXGroup;
 			children = (
@@ -167,27 +210,16 @@
 		FE2D87AA22959156006D1519 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				921A003122984F17006654D5 /* Cells */,
+				921A003022984F08006654D5 /* ViewControllers */,
+				921A002E22984EFB006654D5 /* Models */,
+				921A002D22984EF1006654D5 /* Utils */,
 				FE2D88112296BDF3006D1519 /* Icons */,
 				FE2D87AB22959156006D1519 /* AppDelegate.swift */,
-				FE2D87D9229591A7006D1519 /* MapViewController.swift */,
-				FE2D87F1229591C3006D1519 /* CitiesData.swift */,
 				FE2D87EF229591B9006D1519 /* Main.storyboard */,
-				FE2D8803229591D5006D1519 /* utils.swift */,
 				FE2D87B222959157006D1519 /* Assets.xcassets */,
-				FE2D87F6229591CF006D1519 /* APIHandler.swift */,
-				FE2D87F9229591D0006D1519 /* City.swift */,
-				FE2D87F4229591CF006D1519 /* CityDetails.swift */,
-				FE2D87F3229591CF006D1519 /* DetailsViewController.swift */,
 				FE2D87B422959157006D1519 /* LaunchScreen.storyboard */,
 				FE2D87B722959157006D1519 /* Info.plist */,
-				FE2D880922968415006D1519 /* HeaderCell.swift */,
-				FE2D880B22968491006D1519 /* ForecastCell.swift */,
-				FE2D87F8229591D0006D1519 /* HourlyDetailCell.swift */,
-				FE2D880522967D75006D1519 /* DailyDetailCell.swift */,
-				FE2D880722967FAB006D1519 /* DailySummaryDetailCell.swift */,
-				FE2D880D229687D7006D1519 /* ExtraInfosCell.swift */,
-				FE2D880F22968809006D1519 /* ExtraBisInfosCell.swift */,
-				FE9156292296F95900267CFD /* CitiesListCell.swift */,
 			);
 			path = WeatherApp;
 			sourceTree = "<group>";

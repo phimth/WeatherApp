@@ -13,11 +13,6 @@ class ExtraInfosCell: UITableViewCell {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var winSpeedLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     func configure(withCity city: CityDetails.ForecastData?) {
         if let _humidity = city?.humidity{
             humidityLabel.text = "\((_humidity*100).toRoundString()) %"

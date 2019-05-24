@@ -16,11 +16,6 @@ class HourlyDetailCell: UITableViewCell {
     @IBOutlet weak var humidityLabel: UILabel!
     @IBOutlet weak var temperatureLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(withCity city: CityDetails.ForecastData?, timezone: String?) {
            if let _time = city?.time{
                 let formatter = DateFormatter()

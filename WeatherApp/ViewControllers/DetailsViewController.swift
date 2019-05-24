@@ -26,11 +26,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         let loaderAnim = Animation.named("loader", subdirectory: "Icons")
         loader.loopMode = .loop
         loader.animation = loaderAnim
-//        self.tableView.backgroundColor = .blue
-
         request()
-        //print(self.city)
-        
     }
     
     func request() {
@@ -39,21 +35,21 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         loader.play()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
             APIHandler.requestWeather(coordinates: self.dataReceived?.coordinate, success: { (data) in
-            let decoder = JSONDecoder()
-            self.city = (try? decoder.decode(CityDetails.self, from: data))
-            if let _data =  self.city?.hourly?.data  {
-                self.city?.hourly?.data = Array(_data.prefix(24))
-
+                let decoder = JSONDecoder()
+                self.city = (try? decoder.decode(CityDetails.self, from: data))
+                if let _data =  self.city?.hourly?.data  {
+                    self.city?.hourly?.data = Array(_data.prefix(24))
+                    
+                }
+                self.tableView.reloadData()
+                self.loader.isHidden = true
+                self.tableView.isHidden = false
+                self.loader.stop()
+            }) { (error) in
+                self.loader.isHidden = true
+                self.loader.stop()
+                print(error)
             }
-            self.tableView.reloadData()
-            self.loader.isHidden = true
-            self.tableView.isHidden = false
-            self.loader.stop()
-        }) { (error) in
-            self.loader.isHidden = true
-            self.loader.stop()
-            print(error)
-        }
         }
     }
     
@@ -68,20 +64,27 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         switch section {
         case 0:
             return 1
+            
         case 1:
             return  1
+            
         case 2:
             return (city?.hourly?.data?.count ?? 0)
+            
         case 3:
             return  1
         case 4:
             return (city?.daily?.data?.count ?? 0)
+            
         case 5:
             return  1
+            
         case 6:
             return 1
+            
         default:
             return 0
+            
         }
     }
     

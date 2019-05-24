@@ -15,11 +15,6 @@ class DailyDetailCell: UITableViewCell {
     @IBOutlet weak var tempMaxLabel: UILabel!
     @IBOutlet weak var tempMinLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
     func configure(withCity city: CityDetails.ForecastData?, timezone: String?) {
         if let _time = city?.time{
             let formatter = DateFormatter()

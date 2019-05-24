@@ -28,11 +28,6 @@ struct CityDetails: Decodable {
     struct ForecastList:Decodable {
         var icon: String?
         var summary: String?
-//        var time: Double?
-//        var humidity: Double?
-//        var temperature: Double?
-//        var temperatureMin: Double?
-//        var temperatureMax: Double?
         var data: [ForecastData]?
     }
     

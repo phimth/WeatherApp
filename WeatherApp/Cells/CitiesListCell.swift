@@ -11,10 +11,6 @@ import UIKit
 class CitiesListCell: UITableViewCell {
 
     @IBOutlet weak var CitiesLabel: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     func configure(Name: String?){
         CitiesLabel.text = Name  ?? ""

@@ -43,10 +43,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
 
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-
         let annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
-
-        annotationView.canShowCallout = true // Add this line in your code
+        annotationView.canShowCallout = true
         return annotationView
     }
     
@@ -90,4 +88,3 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     }
     
 }
-
