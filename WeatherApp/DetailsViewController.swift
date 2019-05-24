@@ -37,7 +37,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         loader.isHidden = false
         tableView.isHidden = true
         loader.play()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0){
             APIHandler.requestWeather(coordinates: self.dataReceived?.coordinate, success: { (data) in
             let decoder = JSONDecoder()
             self.city = (try? decoder.decode(CityDetails.self, from: data))
