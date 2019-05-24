@@ -38,18 +38,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="1" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="NY2-Tc-6QE">
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </mapView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-B8-ctz">
-                                <rect key="frame" x="147" y="101" width="121" height="29"/>
-                                <segments>
-                                    <segment title="Map"/>
-                                    <segment title="List"/>
-                                </segments>
-                                <connections>
-                                    <action selector="toList:" destination="YSK-h6-Q0c" eventType="valueChanged" id="OlB-YC-R4w"/>
-                                </connections>
-                            </segmentedControl>
                             <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZEJ-M3-rJR">
-                                <rect key="frame" x="0.0" y="129" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="122" width="414" height="740"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CitiesData" rowHeight="50" id="bft-5e-KBw" customClass="CitiesListCell" customModule="WeatherApp" customModuleProvider="target">
@@ -79,19 +69,29 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="h2R-B8-ctz">
+                                <rect key="frame" x="147" y="92" width="121" height="29"/>
+                                <segments>
+                                    <segment title="Map"/>
+                                    <segment title="List"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toList:" destination="YSK-h6-Q0c" eventType="valueChanged" id="OlB-YC-R4w"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="mkP-Ux-8m2" firstAttribute="trailing" secondItem="ZEJ-M3-rJR" secondAttribute="trailing" id="IE2-jU-IYC"/>
+                            <constraint firstItem="h2R-B8-ctz" firstAttribute="top" secondItem="mkP-Ux-8m2" secondAttribute="top" constant="4" id="INk-Lu-eQw"/>
                             <constraint firstItem="NY2-Tc-6QE" firstAttribute="leading" secondItem="mkP-Ux-8m2" secondAttribute="leading" id="Ke9-fq-nPo"/>
                             <constraint firstItem="mkP-Ux-8m2" firstAttribute="bottom" secondItem="NY2-Tc-6QE" secondAttribute="bottom" id="Mzs-gY-Yz6"/>
                             <constraint firstItem="mkP-Ux-8m2" firstAttribute="trailing" secondItem="h2R-B8-ctz" secondAttribute="trailing" constant="146" id="OUm-Xk-nCg"/>
                             <constraint firstItem="mkP-Ux-8m2" firstAttribute="bottom" secondItem="ZEJ-M3-rJR" secondAttribute="bottom" id="TWG-UQ-Kwr"/>
                             <constraint firstItem="h2R-B8-ctz" firstAttribute="leading" secondItem="mkP-Ux-8m2" secondAttribute="leading" constant="147" id="XDr-HN-aGf"/>
-                            <constraint firstItem="ZEJ-M3-rJR" firstAttribute="top" secondItem="h2R-B8-ctz" secondAttribute="bottom" id="bkl-dv-XYV"/>
                             <constraint firstItem="mkP-Ux-8m2" firstAttribute="trailing" secondItem="NY2-Tc-6QE" secondAttribute="trailing" id="by9-Tg-nos"/>
+                            <constraint firstItem="ZEJ-M3-rJR" firstAttribute="top" secondItem="h2R-B8-ctz" secondAttribute="bottom" constant="2" id="oXn-W1-I5o"/>
                             <constraint firstItem="ZEJ-M3-rJR" firstAttribute="leading" secondItem="mkP-Ux-8m2" secondAttribute="leading" id="sIM-SB-tFt"/>
-                            <constraint firstItem="h2R-B8-ctz" firstAttribute="top" secondItem="mkP-Ux-8m2" secondAttribute="top" constant="13" id="wbf-Rj-KOY"/>
                             <constraint firstItem="NY2-Tc-6QE" firstAttribute="top" secondItem="mkP-Ux-8m2" secondAttribute="top" id="wpC-QP-5Tg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mkP-Ux-8m2"/>
