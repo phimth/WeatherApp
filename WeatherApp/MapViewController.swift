@@ -83,6 +83,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = ListView.dequeueReusableCell(withIdentifier: "CitiesData", for: indexPath) as? CitiesListCell{
             cell.configure(Name: city[indexPath.row].name)
+            cell.backgroundColor = UIColor.clear
             return cell
         }
         return UITableViewCell()
