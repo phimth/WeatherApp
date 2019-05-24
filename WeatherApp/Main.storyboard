@@ -140,8 +140,8 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dg0-KZ-HWa">
-                                                    <rect key="frame" x="280" y="27" width="98" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="273" y="27" width="105" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -164,39 +164,39 @@
                                             <outlet property="temperatureLabel" destination="Dg0-KZ-HWa" id="6hD-v7-fzt"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ForcastCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecastCell" rowHeight="50" id="Yyq-4w-NYi" customClass="ForecastCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="136" width="414" height="50"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ForecastCell" rowHeight="58" id="UOd-Qi-tQo" userLabel="Forecast Cell" customClass="ForecastCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="136" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Yyq-4w-NYi" id="HpU-57-Oik" customClass="HourlyDetailCell" customModule="WeatherApp" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UOd-Qi-tQo" id="MCs-hL-S73">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="01S-VO-QBw">
-                                                    <rect key="frame" x="26" y="8" width="362" height="33.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hourly summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3c-Gt-Yve">
+                                                    <rect key="frame" x="46" y="19" width="322" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="01S-VO-QBw" firstAttribute="leading" secondItem="HpU-57-Oik" secondAttribute="leading" constant="26" id="e2o-tJ-uGd"/>
-                                                <constraint firstAttribute="trailing" secondItem="01S-VO-QBw" secondAttribute="trailing" constant="26" id="eR5-L4-hES"/>
-                                                <constraint firstItem="01S-VO-QBw" firstAttribute="top" secondItem="HpU-57-Oik" secondAttribute="top" constant="8" id="iXd-Iz-rmF"/>
-                                                <constraint firstAttribute="bottom" secondItem="01S-VO-QBw" secondAttribute="bottom" constant="8" id="lij-L4-PtI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="d3c-Gt-Yve" secondAttribute="bottom" constant="8" id="Bfe-gL-O5V"/>
+                                                <constraint firstItem="d3c-Gt-Yve" firstAttribute="leading" secondItem="MCs-hL-S73" secondAttribute="leadingMargin" constant="26" id="IRg-nO-lUs"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="d3c-Gt-Yve" secondAttribute="trailing" constant="26" id="cWa-zN-EM0"/>
+                                                <constraint firstItem="d3c-Gt-Yve" firstAttribute="top" secondItem="MCs-hL-S73" secondAttribute="topMargin" constant="8" id="la5-B3-uAg"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="summaryLabel" destination="01S-VO-QBw" id="3TN-1L-37m"/>
+                                            <outlet property="summaryLabel" destination="d3c-Gt-Yve" id="aVI-yF-Rb1"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyCell" rowHeight="77" id="lyK-Po-MfS" customClass="HourlyDetailCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="186" width="414" height="77"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HourlyCell" rowHeight="81" id="lyK-Po-MfS" customClass="HourlyDetailCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="194" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lyK-Po-MfS" id="x8T-ES-FM3">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7rZ-Rd-bav">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7rZ-Rd-bav">
                                                     <rect key="frame" x="100" y="16" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="TNa-zL-bWN"/>
@@ -204,19 +204,19 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImP-Ty-j5w">
-                                                    <rect key="frame" x="46" y="19" width="38" height="55"/>
+                                                    <rect key="frame" x="46" y="19" width="38" height="36.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foS-ey-7pN">
-                                                    <rect key="frame" x="270.5" y="19" width="97.5" height="39"/>
+                                                    <rect key="frame" x="270" y="19" width="98" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drK-Ep-vLz">
-                                                    <rect key="frame" x="188" y="19" width="69" height="39"/>
+                                                    <rect key="frame" x="188" y="19" width="69" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -225,7 +225,9 @@
                                             <constraints>
                                                 <constraint firstItem="ImP-Ty-j5w" firstAttribute="top" secondItem="x8T-ES-FM3" secondAttribute="topMargin" constant="8" id="3uE-jY-R05"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="foS-ey-7pN" secondAttribute="bottom" constant="8" id="6t9-r1-Oc8"/>
+                                                <constraint firstItem="7rZ-Rd-bav" firstAttribute="centerY" secondItem="drK-Ep-vLz" secondAttribute="centerY" id="9ZA-ie-V6t"/>
                                                 <constraint firstItem="ImP-Ty-j5w" firstAttribute="bottom" secondItem="x8T-ES-FM3" secondAttribute="bottomMargin" constant="8" id="N5A-bt-Ub0"/>
+                                                <constraint firstItem="7rZ-Rd-bav" firstAttribute="top" secondItem="x8T-ES-FM3" secondAttribute="topMargin" constant="5" id="TRW-DZ-R5x"/>
                                                 <constraint firstItem="foS-ey-7pN" firstAttribute="top" secondItem="x8T-ES-FM3" secondAttribute="topMargin" constant="8" id="Yjx-cO-dQf"/>
                                                 <constraint firstItem="drK-Ep-vLz" firstAttribute="leading" secondItem="7rZ-Rd-bav" secondAttribute="trailing" constant="38" id="d0B-ka-bse"/>
                                                 <constraint firstItem="ImP-Ty-j5w" firstAttribute="leading" secondItem="x8T-ES-FM3" secondAttribute="leadingMargin" constant="26" id="eQM-HU-Y89"/>
@@ -242,25 +244,25 @@
                                             <outlet property="temperatureLabel" destination="foS-ey-7pN" id="BIo-at-Mfr"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailySummaryCell" id="DKu-hB-eSe" customClass="DailySummaryDetailCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="263" width="414" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailySummaryCell" rowHeight="58" id="DKu-hB-eSe" customClass="DailySummaryDetailCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="275" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DKu-hB-eSe" id="wO0-NE-IoM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily summary" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuY-xh-flg">
-                                                    <rect key="frame" x="46" y="19" width="342" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="46" y="11" width="322" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="OuY-xh-flg" firstAttribute="leading" secondItem="wO0-NE-IoM" secondAttribute="leadingMargin" constant="26" id="LAV-nx-Mtd"/>
-                                                <constraint firstAttribute="trailing" secondItem="OuY-xh-flg" secondAttribute="trailing" constant="26" id="NfA-yQ-8s8"/>
-                                                <constraint firstItem="OuY-xh-flg" firstAttribute="top" secondItem="wO0-NE-IoM" secondAttribute="topMargin" constant="8" id="YhX-PV-dS8"/>
-                                                <constraint firstItem="OuY-xh-flg" firstAttribute="bottom" secondItem="wO0-NE-IoM" secondAttribute="bottomMargin" constant="8" id="eZm-a9-te0"/>
+                                                <constraint firstItem="OuY-xh-flg" firstAttribute="leading" secondItem="wO0-NE-IoM" secondAttribute="leadingMargin" constant="26" id="5ya-Xj-hnK"/>
+                                                <constraint firstItem="OuY-xh-flg" firstAttribute="bottom" secondItem="wO0-NE-IoM" secondAttribute="bottomMargin" id="8QK-I3-wfx"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="OuY-xh-flg" secondAttribute="trailing" constant="26" id="8x1-nQ-Fpz"/>
+                                                <constraint firstItem="OuY-xh-flg" firstAttribute="top" secondItem="wO0-NE-IoM" secondAttribute="topMargin" id="rMF-cF-zSC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -268,7 +270,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DailyCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DailyCell" rowHeight="81" id="65r-05-TW3" customClass="DailyDetailCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="307" width="414" height="81"/>
+                                        <rect key="frame" x="0.0" y="333" width="414" height="81"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="65r-05-TW3" id="5p1-2j-XKy">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="80.5"/>
@@ -323,7 +325,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExtraCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExtraCell" rowHeight="58" id="D47-By-DJC" customClass="ExtraInfosCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="388" width="414" height="58"/>
+                                        <rect key="frame" x="0.0" y="414" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D47-By-DJC" id="Uze-M2-NVQ">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
@@ -356,21 +358,21 @@
                                             <outlet property="winSpeedLabel" destination="MQ6-ih-qHh" id="AK1-sx-pio"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExtraBisCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExtraBisCell" rowHeight="60" id="GnD-mZ-Rgt" customClass="ExtraBisInfosCell" customModule="WeatherApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="446" width="414" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ExtraBisCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExtraBisCell" rowHeight="58" id="GnD-mZ-Rgt" customClass="ExtraBisInfosCell" customModule="WeatherApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="472" width="414" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GnD-mZ-Rgt" id="hek-Ja-Bdu">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IS3-ou-kRI">
-                                                    <rect key="frame" x="46" y="19" width="68" height="22"/>
+                                                    <rect key="frame" x="46" y="19" width="68" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fda-ZJ-lsH">
-                                                    <rect key="frame" x="344.5" y="19" width="23.5" height="22"/>
+                                                    <rect key="frame" x="344.5" y="19" width="23.5" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

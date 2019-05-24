@@ -73,42 +73,48 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         case 0:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell", for: indexPath) as? HeaderCell {
                 cell.configure(withCity: city?.currently)
-                
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for :  indexPath) as? ForecastCell{
                 cell.configure(withCity: city?.hourly)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         
         case 2:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "HourlyCell", for :  indexPath) as? HourlyDetailCell{
                 cell.configure(withCity: city?.hourly?.data?[indexPath.row], timezone: city?.timezone)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
         case 3:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DailySummaryCell", for :  indexPath) as? DailySummaryDetailCell{
                 cell.configure(withCity: city?.daily)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
             
         case 4:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "DailyCell", for :  indexPath) as? DailyDetailCell{
                 cell.configure(withCity: city?.daily?.data?[indexPath.row], timezone: city?.timezone)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
             
         case 5:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraCell", for :  indexPath) as? ExtraInfosCell{
                 cell.configure(withCity: city?.currently)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
             
         case 6:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ExtraBisCell", for :  indexPath) as? ExtraBisInfosCell{
                 cell.configure(withCity: city?.currently)
+                cell.backgroundColor = UIColor.clear
                 return cell
             }
             
