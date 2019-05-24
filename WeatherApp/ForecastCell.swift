@@ -10,28 +10,32 @@ import UIKit
 
 class ForecastCell: UITableViewCell {
 
-    @IBOutlet weak var hourLabel: UILabel!
-    @IBOutlet weak var humidityLabel: UILabel!
-    @IBOutlet weak var temperatureLabel: UILabel!
+//    @IBOutlet weak var hourLabel: UILabel!
+//    @IBOutlet weak var humidityLabel: UILabel!
+//    @IBOutlet weak var temperatureLabel: UILabel!
+    @IBOutlet weak var summaryLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configure(withCity city: CityDetails.ForecastData?) {
-        if let _time = city?.time{
-            let formatter = DateFormatter()
-            let date = Date(timeIntervalSince1970: _time)
-            formatter.dateFormat = "EEE dd"
-            let formattedDate = formatter.string(from: date)
-            hourLabel.text = "\(formattedDate)"
+    func configure(withCity city: CityDetails.ForecastList?) {
+        if let _summary = city?.summary{
+            summaryLabel.text = _summary
         }
-        if let _humidity = city?.humidity{
-            humidityLabel.text = (_humidity*100).toRoundString()
-        }
-        if let _temperature = city?.temperature{
-            temperatureLabel.text = _temperature.toRoundString()
-        }
+//        if let _time = city?.time{
+//            let formatter = DateFormatter()
+//            let date = Date(timeIntervalSince1970: _time)
+//            formatter.dateFormat = "EEE dd"
+//            let formattedDate = formatter.string(from: date)
+//            hourLabel.text = "\(formattedDate)"
+//        }
+//        if let _humidity = city?.humidity{
+//            humidityLabel.text = (_humidity*100).toRoundString()
+//        }
+//        if let _temperature = city?.temperature{
+//            temperatureLabel.text = _temperature.toRoundString()
+//        }
     }
 }

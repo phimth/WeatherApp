@@ -38,8 +38,6 @@ class HourlyDetailCell: UITableViewCell {
             if let _temperature = city?.temperature{
                 temperatureLabel.text = _temperature.toRoundString()
             }
-
-
         }
     
 }

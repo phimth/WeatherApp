@@ -12,7 +12,6 @@ import MapKit
 class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     
-
     @IBOutlet weak var tableView: UITableView!
     
     var dataReceived: MKPointAnnotation?
@@ -23,6 +22,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         self.title = dataReceived?.title ?? ""
         self.tableView.delegate  =  self
         self.tableView.dataSource = self
+//        self.tableView.backgroundColor = .blue
 
         request()
         //print(self.city)
@@ -74,7 +74,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         case 1:
             if let cell = tableView.dequeueReusableCell(withIdentifier: "ForecastCell", for :  indexPath) as? ForecastCell{
-                cell.configure(withCity: city?.hourly?.data?[indexPath.row])
+                cell.configure(withCity: city?.hourly)
                 return cell
             }
         
