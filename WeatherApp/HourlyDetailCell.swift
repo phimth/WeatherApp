@@ -34,7 +34,7 @@ class HourlyDetailCell: UITableViewCell {
                 iconView.image = UIImage(named: "Icons/\(_icon)")
             }
             if let _humidity = city?.humidity{
-                humidityLabel.text = (_humidity*100).toRoundString()
+                humidityLabel.text = "\((_humidity*100).toRoundString())%"
             }
             if let _temperature = city?.temperature{
                 temperatureLabel.text = "\(_temperature.toRoundString())°"
