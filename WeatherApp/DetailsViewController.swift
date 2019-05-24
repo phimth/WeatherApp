@@ -44,7 +44,7 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 6
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +59,8 @@ class DetailsViewController: UIViewController, UITableViewDelegate, UITableViewD
             return (city?.daily?.data?.count ?? 0)
         case 4:
             return  1
+        case 5:
+            return 1
         default:
             return 0
         }
