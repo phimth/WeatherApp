@@ -229,7 +229,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dgz-Ky-dYn">
-                                                    <rect key="frame" x="195" y="12" width="50" height="49"/>
+                                                    <rect key="frame" x="195" y="12" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="5dM-ue-Ry6"/>
+                                                        <constraint firstAttribute="width" constant="50" id="vZ8-XK-c5D"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RjB-Yo-S55">
                                                     <rect key="frame" x="279" y="25" width="98" height="21"/>
@@ -284,7 +288,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-eG-O4s">
-                                                    <rect key="frame" x="93" y="15" width="50" height="51"/>
+                                                    <rect key="frame" x="93" y="15" width="50" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="Svo-fe-Kcq"/>
+                                                        <constraint firstAttribute="height" constant="50" id="cml-bp-DvO"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TempMax" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8C-Dz-bdV">
                                                     <rect key="frame" x="285" y="30" width="75" height="21"/>
