@@ -59,7 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UITableViewDataSou
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DetailsSegue"{
             if let DetailsVC = segue.destination as? DetailsViewController{
-                mapView.deselectAnnotation(sender as? MKAnnotation, animated: true)
+                mapView.deselectAnnotation(sender as? MKAnnotation, animated: false)
                 DetailsVC.dataReceived = sender as? MKPointAnnotation
             }
         } else {
